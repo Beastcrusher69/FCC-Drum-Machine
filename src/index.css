@@ -8,32 +8,50 @@
 body{
   height:100vh;
   width:100%;
+}
+
+#root{
+  height:100vh;
+  width:100%;
   display:grid;
   place-items:center;
 }
 
-#drum-machine,#keys,#display,#root{
+#keys,#display{
   display:inline-block;
 }
 
 #drum-machine{
   background-color:red;
+  display:flex;
+  border-radius:10px;
+
 }
+
 #keys{
   height:350px;
   width:350px;
   margin:20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  border-radius:5px;
+
 }
 
 #display{
   height:350px;
   width:200px;
   margin:20px 20px 20px 0;
+  border-radius:5px;
+
 }
 
 .drum-pad{
-  height:70px;
-  width:70px;
+  height:90px;
+  width:90px;
   border-radius:50%;
+  display:grid;
+  place-items:center;
 
 }
