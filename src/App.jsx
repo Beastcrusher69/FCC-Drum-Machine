@@ -1,8 +1,16 @@
-import React from 'react'
+import React,{ useEffect } from 'react';
+
+document.addEventListener('keydown', (event) => {
+  const sound = document.getElementById(event.key.toUpperCase());
+  sound.play();
+})
+
 
 class App extends React.Component{
   constructor(props){
     super(props);
+
+    this.playSound=this.playSound.bind(this);
   }
   
     playSound = (selector) => {
@@ -11,6 +19,7 @@ class App extends React.Component{
   }
 
   render(){
+
 
     const arr = [
       {
@@ -72,11 +81,9 @@ class App extends React.Component{
     return(
 
       <div id="drum-machine">
-        {console.log("jay")}
         <div id="keys">
           {arr.map((obj) => 
-            <div  onClick={() => { const audio = document.getElementById(obj.text);
-                                    audio.play();}}
+            <div key={obj.text} onClick={() => { this.playSound(obj.text)}}
                   className="drum-pad" 
                   id={obj.audioName}>
             {obj.text}
@@ -88,7 +95,9 @@ class App extends React.Component{
         </div> 
         <div id="display">
         </div> 
+
       </div> 
+
     )
   }
 }
