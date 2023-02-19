@@ -2,12 +2,12 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  border:1px solid black;
 }
 
 body{
   height:100vh;
   width:100%;
+  background-color: #b7cfff;
 }
 
 #root{
@@ -22,9 +22,10 @@ body{
 }
 
 #drum-machine{
-  background-color:red;
+  background-color:#152A52;
   display:flex;
-  border-radius:10px;
+  border-radius:20px;
+  box-shadow: 2px -1px 5px 1px black inset , -1px 2px 5px 1px white inset;
 
 }
 
@@ -36,6 +37,9 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   border-radius:5px;
+  font-family: tahoma;
+  font-weight:800;
+  font-size:20px;
 
 }
 
@@ -44,6 +48,14 @@ body{
   width:200px;
   margin:20px 20px 20px 0;
   border-radius:5px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  background-color: black;
+  font-size: x-large;
+  font-family: sans-serif ;
+  color:white;
+  border:2px solid #4C6DAD;
 
 }
 
@@ -53,5 +65,7 @@ body{
   border-radius:50%;
   display:grid;
   place-items:center;
-
+  background-color: #4C6DAD;
+  box-shadow: 0 0 10px 2px #FFFFFF, 0 0 5px 3px #3A7CFD, 3px 1px 15px 1px black inset;
+  border:2px solid #5F8ADE;
 }
